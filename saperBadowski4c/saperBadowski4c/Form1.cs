@@ -22,5 +22,17 @@ namespace saperBadowski4c
             Poziom1 lvEasy = new Poziom1();
             lvEasy.Show();
         }
+
+        private void mid_Click(object sender, EventArgs e)
+        {
+            Poziom2 lvMedium = new Poziom2();
+            lvMedium.Show();
+        }
+
+        private void hard_Click(object sender, EventArgs e)
+        {
+            Poziom3 lvHard = new Poziom3();
+            lvHard.Show();
+        }
     }
 }

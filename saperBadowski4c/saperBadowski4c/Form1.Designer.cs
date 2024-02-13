@@ -29,49 +29,76 @@ namespace saperBadowski4c
         /// </summary>
         private void InitializeComponent()
         {
-            this.easy = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            easy = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            mid = new System.Windows.Forms.Button();
+            hard = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // easy
             // 
-            this.easy.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.easy.Location = new System.Drawing.Point(310, 163);
-            this.easy.Name = "easy";
-            this.easy.Size = new System.Drawing.Size(116, 38);
-            this.easy.TabIndex = 0;
-            this.easy.Text = "Łatwy";
-            this.easy.UseVisualStyleBackColor = true;
-            this.easy.Click += new System.EventHandler(this.easy_Click);
+            easy.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            easy.Location = new System.Drawing.Point(310, 163);
+            easy.Name = "easy";
+            easy.Size = new System.Drawing.Size(116, 38);
+            easy.TabIndex = 0;
+            easy.Text = "Łatwy";
+            easy.UseVisualStyleBackColor = true;
+            easy.Click += easy_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(217, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Wybierz poziom trudności:";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(202, 49);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(333, 74);
+            label1.TabIndex = 1;
+            label1.Text = "Witaj w grze Saper! \r\nWybierz poziom trudności:";
+            // 
+            // mid
+            // 
+            mid.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            mid.Location = new System.Drawing.Point(310, 230);
+            mid.Name = "mid";
+            mid.Size = new System.Drawing.Size(116, 38);
+            mid.TabIndex = 2;
+            mid.Text = "Średni";
+            mid.UseVisualStyleBackColor = true;
+            mid.Click += mid_Click;
+            // 
+            // hard
+            // 
+            hard.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            hard.Location = new System.Drawing.Point(310, 303);
+            hard.Name = "hard";
+            hard.Size = new System.Drawing.Size(116, 38);
+            hard.TabIndex = 3;
+            hard.Text = "Trudny";
+            hard.UseVisualStyleBackColor = true;
+            hard.Click += hard_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.easy);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(hard);
+            Controls.Add(mid);
+            Controls.Add(label1);
+            Controls.Add(easy);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.Button easy;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button mid;
+        private System.Windows.Forms.Button hard;
     }
 }
 

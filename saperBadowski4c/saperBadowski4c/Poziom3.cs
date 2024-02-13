@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace saperBadowski4c
 {
-    public partial class Poziom1 : Form
+    public partial class Poziom3 : Form
     {
         private static System.Timers.Timer timer;
         int time = 0;
-        int flag = 10;
+        int flag = 100;
         bool agan = false;
         private void wygrales()
         {
@@ -88,14 +90,14 @@ namespace saperBadowski4c
                 return;
             }
         }
-        PictureBox[] pola = new PictureBox[64];
+        PictureBox[] pola = new PictureBox[1024];
         bool flagmode = false;
-        int[] directions = { -9, -8, -7, -1, 1, 7, 8, 9 };
-        int bombyTotal = 10;
+        int[] directions = { -33, -32, -31, -1, 1, 31, 32, 33 };
+        int bombyTotal = 100;
         bool start = false;
         private void gameOver()
         {
-            for (int i = 0; i < 64; i++)
+            for (int i = 0; i < 1024; i++)
             {
                 pola[i].Enabled = false;
                 if ((string)pola[i].Tag == "bomba")
@@ -116,15 +118,15 @@ namespace saperBadowski4c
 
             foreach (int dir in directions)
             {
-                if (index % 8 == 7 && (dir == 1 || dir == 9 || dir == -7))
+                if (index % 32 == 31 && (dir == 1 || dir == 33 || dir == -31))
                 {
                     continue;
                 }
-                if (index % 8 == 0 && (dir == -1 || dir == -9 || dir == 7))
+                if (index % 32 == 0 && (dir == -1 || dir == -33 || dir == 31))
                 {
                     continue;
                 }
-                if (index + dir >= 64 || index + dir < 0)
+                if (index + dir >= 1024 || index + dir < 0)
                 {
                     continue;
                 }
@@ -148,7 +150,19 @@ namespace saperBadowski4c
                 pole.Tag = "flaga";
                 pole.Image = image.Images[9];
                 flag--;
-                FlagiC.Text = "00" + flag;
+                if (flag == 100)
+                {
+                    FlagiC.Text = flag.ToString();
+                }
+                else
+                if (flag < 10)
+                {
+                    FlagiC.Text = "00" + flag;
+                }
+                else
+                {
+                    FlagiC.Text = "0" + flag;
+                }
                 return;
             }
             if ((string)pole.Tag == "bomba" && flagmode)
@@ -160,8 +174,20 @@ namespace saperBadowski4c
                 pole.Tag = "flagaBomba";
                 pole.Image = image.Images[9];
                 flag--;
-                FlagiC.Text = "00" + flag;
-                for (int i = 0; i < 64; i++)
+                if (flag == 100)
+                {
+                    FlagiC.Text = flag.ToString();
+                }
+                else
+                if (flag < 10)
+                {
+                    FlagiC.Text = "00" + flag;
+                }
+                else
+                {
+                    FlagiC.Text = "0" + flag;
+                }
+                for (int i = 0; i < 1024; i++)
                 {
                     if ((string)pola[i].Tag == "flagaBomba")
                     {
@@ -179,6 +205,11 @@ namespace saperBadowski4c
                 pole.Tag = "ok";
                 pole.Image = image.Images[11];
                 flag++;
+                if (flag == 100)
+                {
+                    FlagiC.Text = flag.ToString();
+                }
+                else
                 if (flag < 10)
                 {
                     FlagiC.Text = "00" + flag;
@@ -194,6 +225,11 @@ namespace saperBadowski4c
                 pole.Tag = "bomba";
                 pole.Image = image.Images[11];
                 flag++;
+                if (flag == 100)
+                {
+                    FlagiC.Text = flag.ToString();
+                }
+                else
                 if (flag < 10)
                 {
                     FlagiC.Text = "00" + flag;
@@ -224,16 +260,16 @@ namespace saperBadowski4c
                 pole.Image = image.Images[12];
                 foreach (int dir in directions)
                 {
-                    if (currentIndex % 8 == 7 && (dir == 1 || dir == 9 || dir == -7))
+                    if (currentIndex % 32 == 31 && (dir == 1 || dir == 33 || dir == -31))
                     {
                         continue;
                     }
-                    if (currentIndex % 8 == 0 && (dir == -1 || dir == -9 || dir == 7))
+                    if (currentIndex % 32 == 0 && (dir == -1 || dir == -33 || dir == 31))
                     {
                         continue;
                     }
                     int nextIndex = currentIndex + dir;
-                    if (nextIndex >= 0 && nextIndex < 64 && (string)pola[nextIndex].Tag == "ok")
+                    if (nextIndex >= 0 && nextIndex < 1024 && (string)pola[nextIndex].Tag == "ok")
                     {
                         sprawdzPola(nextIndex);
                     }
@@ -253,7 +289,7 @@ namespace saperBadowski4c
             int y = 0;
             int index = 0;
             Random rand = new Random();
-            for (int i = 0; i < 64; i++) // tworzenie i dodawanie pol
+            for (int i = 0; i < 1024; i++) // tworzenie i dodawanie pol
             {
                 pola[i] = new PictureBox();
                 pola[i].Width = 25;
@@ -269,16 +305,16 @@ namespace saperBadowski4c
                 panel1.Controls.Add(pola[i]);
                 x += 25;
                 count++;
-                if (count == 8)
+                if (count == 32)
                 {
                     x = 0;
                     count = 0;
                     y += 25;
                 }
             }
-            for (int i = 0; i < 10; i++) // losowanie bomb
+            for (int i = 0; i < 100; i++) // losowanie bomb
             {
-                index = rand.Next(0, 64);
+                index = rand.Next(0, 1024);
                 if ((string)pola[index].Tag == "bomba")
                 {
                     i--;
@@ -291,7 +327,7 @@ namespace saperBadowski4c
 
             }
         }
-        public Poziom1()
+        public Poziom3()
         {
             InitializeComponent();
             inicjalizujPola();
@@ -309,7 +345,7 @@ namespace saperBadowski4c
             }
             start = true;
             PictureBox pole = (PictureBox)sender;
-            for (int i = 0; i < 64; i++)
+            for (int i = 0; i < 1024; i++)
             {
                 if (pola[i].Left == pole.Left)
                 {
@@ -321,14 +357,26 @@ namespace saperBadowski4c
             }
         }
 
-        private void reset_Click(object sender, EventArgs e)
+        private void flagMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (flagMode.Checked)
+            {
+                flagmode = true;
+            }
+            if (!flagMode.Checked)
+            {
+                flagmode = false;
+            }
+        }
+
+        private void reset_Click_1(object sender, EventArgs e)
         {
             agan = true;
             time = 0;
-            flag = 10;
+            flag = 100;
             czas.Text = "000";
-            FlagiC.Text = "010";
-            for (int i = 0; i < 64; i++)
+            FlagiC.Text = "100";
+            for (int i = 0; i < 1024; i++)
             {
                 pola[i].Tag = "ok";
                 pola[i].Image = image.Images[11];
@@ -336,9 +384,9 @@ namespace saperBadowski4c
             }
             int index = 0;
             Random rand = new Random();
-            for (int i = 0; i < 10; i++) // losowanie bomb
+            for (int i = 0; i < 100; i++) // losowanie bomb
             {
-                index = rand.Next(0, 64);
+                index = rand.Next(0, 1024);
                 if ((string)pola[index].Tag == "bomba")
                 {
                     i--;
@@ -350,21 +398,6 @@ namespace saperBadowski4c
                 }
             }
             reset.BackgroundImage = image.Images[10];
-        }
-        private void panel1_MouseClick(object sender, MouseEventArgs e) { }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e) { }
-
-        private void flagMode_CheckedChanged(object sender, EventArgs e)
-        {
-            if (flagMode.Checked)
-            {
-                flagmode = true;
-            }
-            if (!flagMode.Checked)
-            {
-                flagmode = false;
-            }
         }
     }
 }

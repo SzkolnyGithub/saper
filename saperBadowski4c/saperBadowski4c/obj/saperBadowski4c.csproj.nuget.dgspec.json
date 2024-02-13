@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abadowski\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj": {}
+    "C:\\Users\\artur\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abadowski\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj": {
+    "C:\\Users\\artur\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abadowski\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj",
+        "projectUniqueName": "C:\\Users\\artur\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj",
         "projectName": "saperBadowski4c",
-        "projectPath": "C:\\Users\\abadowski\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj",
-        "packagesPath": "C:\\Users\\abadowski\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abadowski\\source\\repos\\saperBadowski4c\\saperBadowski4c\\obj\\",
+        "projectPath": "C:\\Users\\artur\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\artur\\source\\repos\\saperBadowski4c\\saperBadowski4c\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\abadowski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows"
@@ -57,6 +55,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -65,7 +81,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

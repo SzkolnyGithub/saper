@@ -1,7 +1,6 @@
-﻿
-namespace saperBadowski4c
+﻿namespace saperBadowski4c
 {
-    partial class Poziom1
+    partial class Poziom3
     {
         /// <summary>
         /// Required designer variable.
@@ -30,38 +29,68 @@ namespace saperBadowski4c
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poziom1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Poziom3));
             reset = new System.Windows.Forms.Button();
+            flagMode = new System.Windows.Forms.CheckBox();
+            czas = new System.Windows.Forms.Label();
+            FlagiC = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
             image = new System.Windows.Forms.ImageList(components);
-            flagMode = new System.Windows.Forms.CheckBox();
-            FlagiC = new System.Windows.Forms.Label();
-            czas = new System.Windows.Forms.Label();
             SuspendLayout();
             // 
             // reset
             // 
             reset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            reset.ImageKey = "(none)";
-            reset.Location = new System.Drawing.Point(103, 51);
+            reset.Location = new System.Drawing.Point(373, 12);
             reset.Name = "reset";
             reset.Size = new System.Drawing.Size(60, 57);
-            reset.TabIndex = 1;
+            reset.TabIndex = 0;
             reset.UseVisualStyleBackColor = true;
-            reset.Click += reset_Click;
+            reset.Click += reset_Click_1;
+            // 
+            // flagMode
+            // 
+            flagMode.AutoSize = true;
+            flagMode.Location = new System.Drawing.Point(582, 50);
+            flagMode.Name = "flagMode";
+            flagMode.Size = new System.Drawing.Size(51, 19);
+            flagMode.TabIndex = 1;
+            flagMode.Text = "Flagi";
+            flagMode.UseVisualStyleBackColor = true;
+            flagMode.CheckedChanged += flagMode_CheckedChanged;
+            // 
+            // czas
+            // 
+            czas.AutoSize = true;
+            czas.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            czas.ForeColor = System.Drawing.Color.Red;
+            czas.Location = new System.Drawing.Point(475, 32);
+            czas.Name = "czas";
+            czas.Size = new System.Drawing.Size(62, 37);
+            czas.TabIndex = 2;
+            czas.Text = "000";
+            // 
+            // FlagiC
+            // 
+            FlagiC.AutoSize = true;
+            FlagiC.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            FlagiC.ForeColor = System.Drawing.Color.Red;
+            FlagiC.Location = new System.Drawing.Point(262, 32);
+            FlagiC.Name = "FlagiC";
+            FlagiC.Size = new System.Drawing.Size(62, 37);
+            FlagiC.TabIndex = 3;
+            FlagiC.Text = "100";
             // 
             // panel1
             // 
-            panel1.Location = new System.Drawing.Point(37, 115);
+            panel1.Location = new System.Drawing.Point(11, 86);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(200, 200);
-            panel1.TabIndex = 2;
-            panel1.MouseClick += panel1_MouseClick;
-            panel1.MouseDown += panel1_MouseDown;
+            panel1.Size = new System.Drawing.Size(800, 800);
+            panel1.TabIndex = 4;
             // 
             // image
             // 
-            image.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            image.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             image.ImageStream = (System.Windows.Forms.ImageListStreamer)resources.GetObject("image.ImageStream");
             image.TransparentColor = System.Drawing.Color.Transparent;
             image.Images.SetKeyName(0, "bomba.png");
@@ -81,63 +110,29 @@ namespace saperBadowski4c
             image.Images.SetKeyName(14, "resetOver.png");
             image.Images.SetKeyName(15, "resetWin.png");
             // 
-            // flagMode
-            // 
-            flagMode.AutoSize = true;
-            flagMode.Location = new System.Drawing.Point(192, 18);
-            flagMode.Name = "flagMode";
-            flagMode.Size = new System.Drawing.Size(51, 19);
-            flagMode.TabIndex = 3;
-            flagMode.Text = "Flagi";
-            flagMode.UseVisualStyleBackColor = true;
-            flagMode.CheckedChanged += flagMode_CheckedChanged;
-            // 
-            // FlagiC
-            // 
-            FlagiC.AutoSize = true;
-            FlagiC.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            FlagiC.ForeColor = System.Drawing.Color.Red;
-            FlagiC.Location = new System.Drawing.Point(37, 70);
-            FlagiC.Name = "FlagiC";
-            FlagiC.Size = new System.Drawing.Size(62, 37);
-            FlagiC.TabIndex = 4;
-            FlagiC.Text = "010";
-            // 
-            // czas
-            // 
-            czas.AutoSize = true;
-            czas.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            czas.ForeColor = System.Drawing.Color.Red;
-            czas.Location = new System.Drawing.Point(167, 70);
-            czas.Name = "czas";
-            czas.Size = new System.Drawing.Size(62, 37);
-            czas.TabIndex = 5;
-            czas.Text = "000";
-            // 
-            // Poziom1
+            // Poziom3
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.SystemColors.Control;
-            ClientSize = new System.Drawing.Size(270, 349);
-            Controls.Add(czas);
-            Controls.Add(FlagiC);
-            Controls.Add(flagMode);
+            ClientSize = new System.Drawing.Size(822, 898);
             Controls.Add(panel1);
+            Controls.Add(FlagiC);
+            Controls.Add(czas);
+            Controls.Add(flagMode);
             Controls.Add(reset);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Name = "Poziom1";
-            Text = "Łatwy";
+            Name = "Poziom3";
+            Text = "Trudny";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
         private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.CheckBox flagMode;
+        private System.Windows.Forms.Label czas;
+        private System.Windows.Forms.Label FlagiC;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList image;
-        private System.Windows.Forms.CheckBox flagMode;
-        private System.Windows.Forms.Label FlagiC;
-        private System.Windows.Forms.Label czas;
     }
 }

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/YRE99Q0t5pMRRDL5Gq6LZr5hg4Nv6DMBafXNYRjy4DDYF1GmAXUagBh5+MI4wZBTzEmsGYo3AU0hbyFlkaSPA==",
+  "dgSpecHash": "Uc374ogSFh3wWKxH9LKgDUmcQB/3flPuk4WJwuBC0LtBcZ4wUN+rMelxR/hD7VY3CAEHdXd9Bp5W3EkR6+9Jlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\abadowski\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\artur\\source\\repos\\saperBadowski4c\\saperBadowski4c\\saperBadowski4c.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\artur\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\artur\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\artur\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\artur\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
